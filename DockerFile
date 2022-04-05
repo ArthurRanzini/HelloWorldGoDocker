@@ -4,6 +4,7 @@ RUN mkdir /build
 WORKDIR /build
 
 RUN export GO111MODULE=on 
+RUN go get github.com/ArthurRanzini/HelloWorldGoDocker
 RUN cd /build && git clone https://github.com/ArthurRanzini/HelloWorldGoDocker.git
 
 EXPOSE 8080
