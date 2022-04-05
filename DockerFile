@@ -10,6 +10,9 @@ RUN export GO111MODULE=on
 #RUN go get github.com/ArthurRanzini/HelloWorldGoDocker
 RUN cd /build && git clone https://github.com/ArthurRanzini/HelloWorldGoDocker.git
 
-#EXPOSE 8080
-#ENTRYPOINT [ "/build/HelloWorldGoDocker/main/main" ] 
+RUN cd /build/HelloWorldGoDocker/main && go build
+
+EXPOSE 8080
+ENTRYPOINT ["/build/HelloWorldGoDocker/main/main"] 
+
 
