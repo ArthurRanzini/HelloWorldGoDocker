@@ -11,3 +11,5 @@ RUN cd /build && git clone https://github.com/ArthurRanzini/HelloWorldGoDocker.g
 
 EXPOSE 8080
 ENTRYPOINT [ "/build/HelloWorldGoDocker/main/main" ] 
+
+#teste
