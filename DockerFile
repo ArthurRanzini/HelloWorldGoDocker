@@ -5,9 +5,9 @@ WORKDIR /build
 
 RUN apk update && apk add git
 
-#RUN export GO111MODULE=off 
+RUN export GO111MODULE=on
 #RUN go get github.com/ArthurRanzini/HelloWorldGoDocker
 RUN cd /build && git clone https://github.com/ArthurRanzini/HelloWorldGoDocker.git
 
 EXPOSE 8080
-ENTRYPOINT [ "/build/HelloWorldGoDocker/main" ]
+ENTRYPOINT [ "/build/HelloWorldGoDocker/main/main" ]
